@@ -4,8 +4,27 @@
   <meta charset="UTF-8">
   <title>Giriş</title>
 </head>
-<body style="background:black; color:white; text-align:center; margin-top:40vh;">
+<body style="background:black; color:white; text-align:center; margin-top:30vh; font-family:Arial;">
+
   <h1>Buraya kadar geldin.</h1>
   <p>Herkes devam edemez.</p>
+
+  <p><strong>Soru:</strong> Türkiye Cumhuriyeti hangi yılda kuruldu</p>
+
+  <input id="cevap" placeholder="cevabı yaz" style="padding:10px;">
+  <br><br>
+  <button onclick="kontrol()" style="padding:10px;">Devam</button>
+
+  <script>
+    function kontrol() {
+      let c = document.getElementById("cevap").value;
+      if (c === "1923") {
+        window.location.href = "bulmaca2.html";
+      } else {
+        alert("olmadı. tekrar dene");
+      }
+    }
+  </script>
+
 </body>
 </html>

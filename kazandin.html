@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Game Over</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      color: lime;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 10px;
+      color: white;
+    }
+
+    .confetti {
+      position: absolute;
+      top: -50px;
+      font-size: 30px;
+      animation: fall 3s linear infinite;
+    }
+
+    @keyframes fall {
+      from { transform: translateY(0); }
+      to { transform: translateY(110vh); }
+    }
+
+    #jumpscare {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: black;
+      color: red;
+      font-size: 60px;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 40vh;
+      z-index: 10;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="center">
+    <h1>GAME OVER</h1>
+    <h2>mission completed</h2>
+  </div>
+
+  <div id="jumpscare">SANA PUANIM 9 KANKA</div>
+
+  <script>
+    // konfeti + zombi yağmuru
+    for (let i = 0; i < 40; i++) {
+      let e = document.createElement("div");
+      e.className = "confetti";
+      e.innerText = Math.random() > 0.5 ? "🎉" : "🧟";
+      e.style.left = Math.random() * 100 + "vw";
+      e.style.animationDuration = (2 + Math.random() * 3) + "s";
+      document.body.appendChild(e);
+    }
+
+    // 3 saniye sonra jumpscare
+    setTimeout(() => {
+      document.getElementById("jumpscare").style.display = "block";
+    }, 3000);
+  </script>
+
+</body>
+</html>

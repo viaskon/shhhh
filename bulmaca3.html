@@ -2,12 +2,29 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Bulmaca 3</title>
+  <title>LAST ONE😈</title>
 </head>
-<body style="background:black; color:lime; text-align:center; margin-top:30vh; font-family:Arial;">
+<body style="background:black; color:white; text-align:center; margin-top:30vh; font-family:Arial;">
 
-  <h1>Buraya az kişi gelir.</h1>
-  <p>devamı yakında</p>
+  <h1>Son adım.</h1>
+  <p>Helal la.</p>
+
+  <p><strong>Soru:</strong> en sevdiğim renk ne </p>
+
+  <input id="cevap" placeholder="rengi yaz" style="padding:10px;">
+  <br><br>
+  <button onclick="kontrol()">Bitir</button>
+
+  <script>
+    function kontrol() {
+      let c = document.getElementById("cevap").value;
+      if (c === "bordo") {
+        window.location.href = "kazandin.html";
+      } else {
+        alert("mutsuz son sar başa");
+      }
+    }
+  </script>
 
 </body>
 </html>

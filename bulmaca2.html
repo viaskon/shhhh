@@ -4,14 +4,29 @@
   <meta charset="UTF-8">
   <title>Bulmaca 2</title>
 </head>
-<body style="background:black; color:lime; text-align:center; margin-top:30vh; font-family:Arial;">
+<body style="background:black; color:white; text-align:center; margin-top:30vh; font-family:Arial;">
 
   <h1>İkinci seviyedesin.</h1>
-  <p>Herkes buraya gelemez.</p>
 
-  <p><strong>İpucu:</strong> cevap bu sayfanın içinde ama ekranda değil</p>
+  <p>
+    Sadece <b>D</b>ikkatli olanlar <b>E</b>trafı <b>V</b>erimli <b>A</b>nlar.  
+    <b>M</b>eraklı olanlar ilerler.
+  </p>
 
-  <!-- cevap: anahtar -->
+  <input id="cevap" placeholder="cevabı yaz" style="padding:10px;">
+  <br><br>
+  <button onclick="kontrol()">Devam</button>
+
+  <script>
+    function kontrol() {
+      let c = document.getElementById("cevap").value.toLowerCase();
+      if (c === "devam") {
+        window.location.href = "bulmaca3.html";
+      } else {
+        alert("olmadı ama yaklaştın");
+      }
+    }
+  </script>
 
 </body>
 </html>
